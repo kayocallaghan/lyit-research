@@ -11,4 +11,4 @@ jobs:
     steps:
     - name: REST API with curl
       run: |
-        curl -X GET "https://example.com/api/v2/endpoint"
+        curl -X GET "https://services.nvd.nist.gov/rest/json/cves/1.0/"
