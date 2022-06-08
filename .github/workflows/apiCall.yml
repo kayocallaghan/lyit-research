@@ -25,4 +25,6 @@ jobs:
         uses: JamesIves/fetch-api-data-action@v2.2.2
         with:
           endpoint: https://services.nvd.nist.gov/rest/json/cves/1.0/
-          configuration: '{ "method": "GET", "headers": {"Authorization": "Bearer ${{ secrets.NVD_API_KEY }}"} }'
+          configuration: '{ "method": "GET", }'
+          save-location: api-data-save
+          save-name: response
