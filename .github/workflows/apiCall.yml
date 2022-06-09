@@ -24,11 +24,11 @@ jobs:
         with:
           persist-credentials: false
           
-      - name: Set current date as env variable
-        run: echo "NOW::$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
+    #  - name: Set current date as env variable
+    #    run: echo "NOW::$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
         
-      - name: Echo current date
-        run: echo $NOW
+    #  - name: Echo current date
+    #    run: echo $NOW
 
       - name: Fetch API Data
         uses: JamesIves/fetch-api-data-action@v2.2.2
