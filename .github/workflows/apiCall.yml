@@ -27,7 +27,7 @@ jobs:
       - name: Fetch API Data
         uses: JamesIves/fetch-api-data-action@v2.2.2
         with:
-          endpoint: https://services.nvd.nist.gov/rest/json/cves/1.0/
+          endpoint: https://services.nvd.nist.gov/rest/json/cves/1.0/?keyword=apache
           configuration: '{ "method": "GET" }'
 
       - name: Build and Deploy 🚀
