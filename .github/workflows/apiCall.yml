@@ -23,11 +23,17 @@ jobs:
         uses: actions/checkout@v2
         with:
           persist-credentials: false
+          
+      - name: Set current date as env variable
+        run: echo "NOW::$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
+        
+      - name: Echo current date
+        run: echo $NOW
 
       - name: Fetch API Data
         uses: JamesIves/fetch-api-data-action@v2.2.2
         with:
-          endpoint: https://services.nvd.nist.gov/rest/json/cves/1.0/?keyword=apache
+          endpoint: https://services.nvd.nist.gov/rest/json/cves/1.0/?pubStartDate=2022-06-07T13:00:00:000 UTC%2B01:00&pubEndDate=2022-06-09T13:36:00:000 UTC%2B01:00
           configuration: '{ "method": "GET" }'
 
       - name: Build and Deploy 🚀
