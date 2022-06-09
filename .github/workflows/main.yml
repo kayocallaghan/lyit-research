@@ -13,4 +13,4 @@ jobs:
     steps:
     - name: REST API with curl
       run: |
-        curl -X GET "https://services.nvd.nist.gov/rest/json/cves/1.0/"
+        curl -X GET "https://services.nvd.nist.gov/rest/json/cves/1.0/?keyword=apache"
