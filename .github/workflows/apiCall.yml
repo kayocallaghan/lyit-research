@@ -30,6 +30,9 @@ jobs:
         
     #  - name: Echo current date
     #    run: echo $NOW
+    
+      - name: Run a one-line script
+        run: echo $(date +%Y%m%d%H%M) >> $date_var
 
       - name: Fetch API Data
         uses: JamesIves/fetch-api-data-action@v2.2.2
